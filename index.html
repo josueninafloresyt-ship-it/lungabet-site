@@ -1,27 +1,330 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunga Bet</title>
+    <title>Lunga Bet - Plataforma de Apostas</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .responsible-highlight {
+            border: 2px solid #fbbf24;
+            background: rgba(251, 191, 36, 0.1);
+        }
+        
+        .betting-card {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .odds-button {
+            transition: all 0.2s ease;
+        }
+        
+        .odds-button:hover {
+            transform: scale(1.05);
+            background: #3b82f6;
+            color: white;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h1 class="text-3xl font-bold">Lunga Bet</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-yellow-300 transition-colors">Esportes</a>
+                    <a href="#" class="hover:text-yellow-300 transition-colors">Ao Vivo</a>
+                    <a href="#" class="hover:text-yellow-300 transition-colors">Cassino</a>
+                    <a href="#" class="hover:text-yellow-300 transition-colors">Promoções</a>
+                </nav>
+                <div class="flex space-x-3">
+                    <button class="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Entrar
+                    </button>
+                    <button class="bg-yellow-400 text-purple-800 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                        Registrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="text-center mt-8">
-        <button class="bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
-            Ver Todas as Casas Parceiras →
-        </button>
-    </div>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center mb-4">
+                <div class="bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-lg">
+                    🔞 +18 ANOS
+                </div>
+            </div>
+            <h2 class="text-5xl font-bold mb-6">Bem-vindo ao Lunga Bet</h2>
+            <p class="text-2xl mb-4 max-w-3xl mx-auto font-semibold">O seu hub de casas de apostas confiáveis</p>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">As melhores casas de apostas reunidas em um só lugar</p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-yellow-400 text-purple-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-colors">
+                    Cadastrar-se
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                    Saiba Mais
+                </button>
+            </div>
+            <div class="mt-8 bg-black bg-opacity-30 rounded-lg p-4 max-w-2xl mx-auto">
+                <p class="text-sm font-semibold text-yellow-300">⚠️ JOGUE COM RESPONSABILIDADE</p>
+                <p class="text-sm mt-2">Apostas envolvem riscos financeiros. Pode causar dependência. Proibido para menores de 18 anos.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="card-hover p-6">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">50K+</div>
+                    <div class="text-gray-600">Usuários Ativos</div>
+                </div>
+                <div class="card-hover p-6">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">1000+</div>
+                    <div class="text-gray-600">Jogos Diários</div>
+                </div>
+                <div class="card-hover p-6">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">98%</div>
+                    <div class="text-gray-600">Taxa de Pagamento</div>
+                </div>
+                <div class="card-hover p-6">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">24/7</div>
+                    <div class="text-gray-600">Suporte</div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button class="bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
+                    Ver Todas as Casas Parceiras →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Houses Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">🔁 Compare as Melhores Casas de Apostas</h3>
+                <p class="text-xl text-gray-600">Casas parceiras verificadas e confiáveis</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Betano -->
+                <div class="betting-card rounded-xl p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-2xl">B</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Betano</h4>
+                    <div class="text-sm text-gray-600 mb-4">
+                        <p class="font-semibold text-green-600">🎁 Missões diárias com prêmios</p>
+                        <p>💰 Cashback em apostas de futebol</p>
+                        <p>🚀 Saque: Instantâneo via PIX</p>
+                        <p>⭐ 4.8/5 - Mais popular</p>
+                    </div>
+                    <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                        Conferir Ofertas
+                    </button>
+                </div>
+
+                <!-- Bet7K -->
+                <div class="betting-card rounded-xl p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-lg">7K</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Bet7K</h4>
+                    <div class="text-sm text-gray-600 mb-4">
+                        <p class="font-semibold text-blue-600">🎰 Giros grátis em slots</p>
+                        <p>📈 Promoções semanais exclusivas</p>
+                        <p>⚡ Saque: Até 5 minutos</p>
+                        <p>⭐ 4.7/5 - Melhor variedade</p>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        Conferir Ofertas
+                    </button>
+                </div>
+
+                <!-- Pixbet -->
+                <div class="betting-card rounded-xl p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">P</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Pixbet</h4>
+                    <div class="text-sm text-gray-600 mb-4">
+                        <p class="font-semibold text-purple-600">📲 Promoções exclusivas no app</p>
+                        <p>🎯 Apostas com odds especiais</p>
+                        <p>🚀 Saque: Mais rápido do Brasil</p>
+                        <p>⭐ 4.6/5 - Saque instantâneo</p>
+                    </div>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                        Conferir Ofertas
+                    </button>
+                </div>
+
+                <!-- JonBet -->
+                <div class="betting-card rounded-xl p-6 card-hover text-center">
+                    <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">J</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">JonBet</h4>
+                    <div class="text-sm text-gray-600 mb-4">
+                        <p class="font-semibold text-orange-600">🏆 Missões com prêmios semanais</p>
+                        <p>🎁 Torneios e competições</p>
+                        <p>💳 Saque: PIX em minutos</p>
+                        <p>⭐ 4.5/5 - Melhor comunidade</p>
+                    </div>
+                    <button class="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+                        Conferir Ofertas
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Weekly Highlights Section -->
+    <section class="py-16 bg-gradient-to-r from-purple-100 to-blue-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">🔥 Destaques da Semana</h3>
+                <p class="text-xl text-gray-600">As melhores promoções das nossas casas parceiras</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 card-hover border-l-4 border-purple-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">P</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Pixbet</h4>
+                    </div>
+                    <p class="text-purple-600 font-semibold mb-2">🎁 15 giros grátis para novos usuários!</p>
+                    <p class="text-gray-600 text-sm mb-4">Válido apenas esta semana. Cadastre-se e aproveite!</p>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                        Aproveitar Oferta
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 card-hover border-l-4 border-orange-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">J</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">JonBet</h4>
+                    </div>
+                    <p class="text-orange-600 font-semibold mb-2">📈 Missões com prêmios toda semana!</p>
+                    <p class="text-gray-600 text-sm mb-4">Complete desafios e ganhe recompensas exclusivas.</p>
+                    <button class="w-full bg-orange-600 text-white py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+                        Participar Agora
+                    </button>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 card-hover border-l-4 border-green-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">B</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Betano</h4>
+                    </div>
+                    <p class="text-green-600 font-semibold mb-2">💰 Cashback nas apostas de futebol!</p>
+                    <p class="text-gray-600 text-sm mb-4">Receba parte do valor de volta em apostas perdidas.</p>
+                    <button class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                        Conferir Cashback
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">📋 Como Funciona</h3>
+                <p class="text-xl text-gray-600">Siga estes passos simples para começar a apostar com segurança</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center card-hover p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-2xl">1</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Escolha uma Casa</h4>
+                    <p class="text-gray-600">Selecione uma das nossas casas parceiras verificadas e confiáveis</p>
+                </div>
+                
+                <div class="text-center card-hover p-6 rounded-xl bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-2xl">2</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Cadastre-se</h4>
+                    <p class="text-gray-600">Use nosso link exclusivo para garantir os melhores bônus disponíveis</p>
+                </div>
+                
+                <div class="text-center card-hover p-6 rounded-xl bg-gradient-to-br from-purple-50 to-violet-50 border-2 border-purple-200">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-2xl">3</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Deposite</h4>
+                    <p class="text-gray-600">Faça seu primeiro depósito e aproveite o bônus de boas-vindas</p>
+                </div>
+                
+                <div class="text-center card-hover p-6 rounded-xl bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200">
+                    <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-2xl">4</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Siga os Sinais</h4>
+                    <p class="text-gray-600">Entre no nosso Telegram e receba sinais diários com alta assertividade</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button class="bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
+                    Ver Todas as Casas Parceiras →
+                </button>
+            </div>
+        </div>
+    </section>
 
     <!-- Telegram Section -->
     <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
         <div class="container mx-auto px-4 text-center">
             <div class="max-w-4xl mx-auto">
+                <div class="text-6xl mb-6">🎯</div>
                 <h3 class="text-4xl font-bold mb-4">Sinais Diários com Alta Assertividade</h3>
                 <p class="text-xl mb-8">Entre no nosso grupo gratuito no Telegram e aposte com mais confiança</p>
-
+                
                 <div class="bg-white bg-opacity-10 rounded-xl p-6 mb-8">
                     <h4 class="text-2xl font-bold mb-4 text-center">Por que entrar no nosso Telegram?</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -43,28 +346,197 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <div class="bg-white bg-opacity-20 rounded-lg p-6">
-                        <h3 class="text-3xl mb-2 font-bold">💰</h3>
-                        <p>Bônus de boas-vindas</p>
+                        <div class="text-3xl mb-2">📊</div>
+                        <h4 class="font-bold text-lg mb-2">85% de Assertividade</h4>
+                        <p class="text-sm">Histórico comprovado de acertos</p>
                     </div>
                     <div class="bg-white bg-opacity-20 rounded-lg p-6">
-                        <h3 class="text-3xl mb-2 font-bold">⚡</h3>
-                        <p>Saques instantâneos</p>
+                        <div class="text-3xl mb-2">⚡</div>
+                        <h4 class="font-bold text-lg mb-2">Sinais em Tempo Real</h4>
+                        <p class="text-sm">Receba as melhores oportunidades na hora</p>
                     </div>
                     <div class="bg-white bg-opacity-20 rounded-lg p-6">
-                        <h3 class="text-3xl mb-2 font-bold">📈</h3>
-                        <p>Mais de 10 casas parceiras</p>
+                        <div class="text-3xl mb-2">🆓</div>
+                        <h4 class="font-bold text-lg mb-2">100% Gratuito</h4>
+                        <p class="text-sm">Sem mensalidades ou taxas ocultas</p>
                     </div>
                 </div>
-
-                <a href="https://t.me/seugrupotelegram" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                    Entrar no Grupo do Telegram
-                </a>
+                
+                <button class="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-lg text-xl font-bold transition-colors inline-flex items-center space-x-3">
+                    <span>📱</span>
+                    <span>Entrar no Telegram</span>
+                </button>
+                
+                <p class="text-sm mt-4 opacity-75">+15.000 membros ativos • Grupo verificado</p>
             </div>
+            
         </div>
     </section>
 
-</body>
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-4xl font-bold mb-6">Cadastre-se de forma responsável</h3>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Plataforma segura e licenciada para apostas esportivas</p>
+            <button class="bg-yellow-400 text-purple-800 px-12 py-4 rounded-lg text-xl font-bold hover:bg-yellow-300 transition-colors">
+                Criar Conta (+18)
+            </button>
+            <div class="mt-6 bg-black bg-opacity-30 rounded-lg p-4 max-w-lg mx-auto">
+                <p class="text-sm font-semibold text-yellow-300">⚠️ AVISO IMPORTANTE</p>
+                <p class="text-xs mt-2">Apostas envolvem riscos. Pode causar dependência. Jogue com responsabilidade. +18 anos.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                            <span class="text-lg">🎯</span>
+                        </div>
+                        <h5 class="text-xl font-bold">Lunga Bet</h5>
+                    </div>
+                    <p class="text-gray-400 mb-3">Hub de casas de apostas confiáveis.</p>
+                    <div class="text-xs text-gray-500">
+                        <p>CNPJ: 12.345.678/0001-90</p>
+                        <p>Contato: contato@lungabet.com</p>
+                        <div class="mt-3 p-3 bg-yellow-900 bg-opacity-30 rounded border border-yellow-600">
+                            <p class="text-yellow-400 font-semibold mb-1">⚠️ AVISO LEGAL IMPORTANTE:</p>
+                            <p class="text-xs text-yellow-200">Este site não realiza apostas. Apenas divulgamos casas de apostas licenciadas como promotores afiliados. Proibido para menores de 18 anos. Jogue com responsabilidade.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h6 class="font-semibold mb-4">Esportes</h6>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Futebol</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Basquete</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tênis</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Vôlei</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h6 class="font-semibold mb-4">Suporte</h6>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Central de Ajuda</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Chat ao Vivo</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">WhatsApp</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Email</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h6 class="font-semibold mb-4">Legal</h6>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacidade</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Jogo Responsável</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Licenças</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8">
+                <div class="text-center mb-4">
+                    <div class="bg-red-600 text-white px-4 py-2 rounded-lg inline-block font-bold mb-2">
+                        🔞 PROIBIDO PARA MENORES DE 18 ANOS
+                    </div>
+                    <p class="text-yellow-300 font-semibold">⚠️ APOSTAS ENVOLVEM RISCOS FINANCEIROS</p>
+                    <p class="text-sm text-gray-400 mt-2">Pode causar dependência. Jogue com responsabilidade.</p>
+                </div>
+                <div class="text-center text-gray-400 text-sm">
+                    <p>&copy; 2024 Lunga Bet - Hub de Casas de Apostas. CNPJ: 12.345.678/0001-90</p>
+                    <p class="mt-1">Contato: contato@lungabet.com | Não operamos apostas diretamente</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stats on scroll
+            const stats = document.querySelectorAll('.card-hover');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            stats.forEach(stat => {
+                stat.style.opacity = '0';
+                stat.style.transform = 'translateY(20px)';
+                stat.style.transition = 'all 0.6s ease';
+                observer.observe(stat);
+            });
+            
+            // Add click functionality to betting buttons
+            const bettingButtons = document.querySelectorAll('.odds-button');
+            bettingButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Create a simple betting slip notification
+                    const notification = document.createElement('div');
+                    notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+                    notification.innerHTML = `
+                        <div class="flex items-center space-x-2">
+                            <span>✅</span>
+                            <span>Aposta adicionada ao bilhete!</span>
+                        </div>
+                    `;
+                    document.body.appendChild(notification);
+                    
+                    // Animate in
+                    setTimeout(() => {
+                        notification.style.transform = 'translateX(0)';
+                    }, 100);
+                    
+                    // Remove after 3 seconds
+                    setTimeout(() => {
+                        notification.style.transform = 'translateX(full)';
+                        setTimeout(() => {
+                            document.body.removeChild(notification);
+                        }, 300);
+                    }, 3000);
+                });
+            });
+            
+            // Add mobile menu toggle
+            const mobileMenuButton = document.createElement('button');
+            mobileMenuButton.className = 'md:hidden text-white';
+            mobileMenuButton.innerHTML = '☰';
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9680fe844238622a',t:'MTc1NDAwNTc4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
